@@ -8,17 +8,16 @@ public class SumOfFirstNNumbers {
 
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int total = 0;
-        int sum = sum(n, total);
+        int sum = sum(n);
         System.out.println(sum);
     }
 
-    private static int sum(int n, int total) {
+    private static int sum(int n) {
 
        if(n==0){
-           return total;
+           return 0;
        }
 
-       return n + sum(n-1, total);
+       return n + sum(n-1);
     }
 }
